@@ -1,13 +1,15 @@
-CXX:= g++
+CXX := g++
 CXXFLAGS := -Wall -g -std=c++11
 
 all: bin/Sort.exe 
 
-bin/Sort.exe: build/Sort.o
-	$(CXX) $(CXXFLAGS) build/Sort.o -o bin/Sort.exe
+bin/Sort.exe: build/sort_main.o
+	$(CXX) $(CXXFLAGS) build/sort_main.o -o bin/Sort.exe
 
-build/Sort.o: src/Sort.cpp
-	$(CXX) $(CXXFLAGS) -c src/Sort.cpp -o build/Sort.o
+build/sort_main.o: src/sort_main.cpp
+	$(CXX) $(CXXFLAGS) -c src/sort_main.cpp -o build/sort_main.o
+
+test: 
 
 clean:
 	rm -f build/*.o
