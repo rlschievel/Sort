@@ -1,8 +1,7 @@
 #include "BubbleSort.h"
-#include <iostream>
 
-void sort(std::vector<int> &values){
-  std::cout << "Performing Bubble Sort" << std::endl;
-
+void BubbleSort::sort(std::vector<int> &values){
+  //Add code for Bubble Sort algorithm here
+  
   return;
 }
