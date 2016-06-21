@@ -7,21 +7,21 @@ TEST(BubbleSortTest, Sorted){
   std::vector<int>::iterator it;
   BubbleSort bubbleSorter;
 
-  values.push_back(2);
-  values.push_back(1);
-  values.push_back(5);
-  values.push_back(3);
-
-  it = values.begin();
+  values.push_back(300);
+  values.push_back(200);
+  values.push_back(600);
+  values.push_back(400);
 
   bubbleSorter.sort(values);
 
-  EXPECT_EQ(*it, 1);
+  it = values.begin();
+
+  EXPECT_EQ(*it, 200);
   ++it;
-  EXPECT_EQ(*it, 2);
+  EXPECT_EQ(*it, 300);
   ++it;
-  EXPECT_EQ(*it, 3);
+  EXPECT_EQ(*it, 400);
   ++it;
-  EXPECT_EQ(*it, 5);
+  EXPECT_EQ(*it, 600);
 }
 

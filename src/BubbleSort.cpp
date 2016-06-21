@@ -1,18 +1,18 @@
 #include "BubbleSort.h"
 
 void BubbleSort::sort(std::vector<int> &values){
-  //Add code for Bubble Sort algorithm here
+  //Bubble Sort algorithm here
 
   bool swapped = true;
-  std::vector<int>::iterator it = values.begin();
+  std::vector<int>::iterator it;
 
   while(swapped){
     swapped = false;
 
-    for(it = values.begin(); it != values.end(); ++it){
+    for(it = values.begin(); it != --values.end(); ++it){
       if(*it > *(it + 1)){
-	Sort::swap(values, it + 1, it);
-	swapped = true;
+        Sort::swap(values, it, (it + 1));
+        swapped = true;
       }
     }
   }
