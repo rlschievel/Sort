@@ -2,9 +2,10 @@ CXX := g++
 CXXFLAGS := -Iinclude/ -Wall -g -std=gnu++11
 GTEST_HEADERS := include/gtest/*.h \
 		 include/gtest/internal/*.h
-OBJECTS := build/Sort.o build/BubbleSort.o build/SelectionSort.o #build/InsertionSort.o
-TEST_OBJS := build/UnitTest_unittest.o build/Sort.o build/Sort_unittest.o build/BubbleSort.o build/BubbleSort_unittest.o build/SelectionSort.o build/SelectionSort_unittest.o
-TESTS := build/Sort_unittest.o build/BubbleSort_unittest.o build/SelectionSort_unittest.o
+OBJECTS := build/Sort.o build/BubbleSort.o build/SelectionSort.o build/InsertionSort.o
+TEST_OBJS := build/UnitTest_unittest.o build/Sort.o build/Sort_unittest.o build/BubbleSort.o build/BubbleSort_unittest.o \
+	     build/SelectionSort.o build/SelectionSort_unittest.o build/InsertionSort.o build/InsertionSort_unittest.o
+TESTS := build/Sort_unittest.o build/BubbleSort_unittest.o build/SelectionSort_unittest.o build/InsertionSort_unittest.o
 
 run: all
 	bin\Test.exe

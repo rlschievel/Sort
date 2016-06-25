@@ -1,18 +1,18 @@
 #include "gtest/gtest.h"
-#include "BubbleSort.h"
+#include "InsertionSort.h"
 #include <vector>
 
-TEST(BubbleSortTest, Unsorted){
+TEST(InsertionSortTest, Unsorted){
   std::vector<int> values;
   std::vector<int>::iterator it;
-  BubbleSort bubbleSorter;
+  InsertionSort insertionSorter;
 
   values.push_back(300);
   values.push_back(200);
   values.push_back(600);
   values.push_back(400);
 
-  bubbleSorter.sort(values);
+  insertionSorter.sort(values);
 
   it = values.begin();
 
@@ -25,17 +25,17 @@ TEST(BubbleSortTest, Unsorted){
   EXPECT_EQ(*it, 600);
 }
 
-TEST(BubbleSortTest, ReverseSorted){
+TEST(InsertionSortTest, ReverseSorted){
   std::vector<int> values;
   std::vector<int>::iterator it;
-  BubbleSort bubbleSorter;
+  InsertionSort insertionSorter;
 
   values.push_back(5);
   values.push_back(4);
   values.push_back(3);
   values.push_back(0);
 
-  bubbleSorter.sort(values);
+  insertionSorter.sort(values);
 
   it = values.begin();
 
@@ -48,17 +48,17 @@ TEST(BubbleSortTest, ReverseSorted){
   EXPECT_EQ(*it, 5);
 }
 
-TEST(BubbleSortTest, SortedButLast){
+TEST(InsertionSortTest, SortedButLast){
   std::vector<int> values;
   std::vector<int>::iterator it;
-  BubbleSort bubbleSorter;
+  InsertionSort insertionSorter;
 
   values.push_back(0);
   values.push_back(3);
   values.push_back(4);
   values.push_back(1);
 
-  bubbleSorter.sort(values);
+  insertionSorter.sort(values);
 
   it = values.begin();
 
@@ -71,17 +71,17 @@ TEST(BubbleSortTest, SortedButLast){
   EXPECT_EQ(*it, 4);
 }
 
-TEST(BubbleSortTest, Sorted){
+TEST(InsertionSortTest, Sorted){
   std::vector<int> values;
   std::vector<int>::iterator it;
-  BubbleSort bubbleSorter;
+  InsertionSort insertionSorter;
 
   values.push_back(1);
   values.push_back(3);
   values.push_back(12);
   values.push_back(1234);
 
-  bubbleSorter.sort(values);
+  insertionSorter.sort(values);
 
   it = values.begin();
 
@@ -93,4 +93,3 @@ TEST(BubbleSortTest, Sorted){
   ++it;
   EXPECT_EQ(*it, 1234);
 }
-
