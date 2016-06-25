@@ -48,6 +48,29 @@ TEST(BubbleSortTest, ReverseSorted){
   EXPECT_EQ(*it, 5);
 }
 
+TEST(BubbleSortTest, SortedButLast){
+  std::vector<int> values;
+  std::vector<int>::iterator it;
+  BubbleSort bubbleSorter;
+
+  values.push_back(0);
+  values.push_back(3);
+  values.push_back(4);
+  values.push_back(1);
+
+  bubbleSorter.sort(values);
+
+  it = values.begin();
+
+  EXPECT_EQ(*it, 0);
+  ++it;
+  EXPECT_EQ(*it, 1);
+  ++it;
+  EXPECT_EQ(*it, 3);
+  ++it;
+  EXPECT_EQ(*it, 4);
+}
+
 TEST(BubbleSortTest, Sorted){
   std::vector<int> values;
   std::vector<int>::iterator it;
